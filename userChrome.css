@@ -1,0 +1,133 @@
+#navigator-toolbox *, #browser * {
+  font-family: "Nebula Sans", sans-serif;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: subpixel-antialiased;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: none;
+	font-kerning: normal;
+}
+
+.tab-background
+, #firefox-view-button .toolbarbutton-icon
+, #alltabs-button .toolbarbutton-badge-stack
+, #tabs-newtab-button .toolbarbutton-icon {
+  border-radius: 8px !important;
+  margin: 6px 0 !important;
+}
+
+.tab-background {
+  &:is([selected], [multiselected]) {
+    background-color: var(--tab-selected-bgcolor) !important;
+    border: 0.5px solid #00000040 !important;
+    box-shadow: 0px 0px 2px #00000050 !important;
+  }
+}
+
+.tab-content {
+  padding: 9px 10px !important;
+  gap: 4px !important;
+  margin: 0 !important;
+}
+
+.tab-text.tab-label {
+  font-weight: 500;
+  letter-spacing: -0.01rem;
+  font-size: 1.1rem;
+}
+
+
+#TabsToolbar, #tabbrowser-tabs {
+    --tab-min-height: 31px !important;
+}
+
+#tabbrowser-tabs {
+  border-left: none !important;
+}
+
+#tabbrowser-tabbox {
+  @media -moz-pref("sidebar.revamp") {
+    margin: 0px 10px 10px 10px !important;
+    
+    outline: 0.5px solid light-dark(#00000032, #FFFFFF22) !important;
+    box-shadow: 0px 0px 3px #0000003F !important;
+  }
+}
+
+#tabbrowser-tabbox, #tabbrowser-tabbox * {
+  border-radius: 8px !important;
+  overflow: hidden
+}
+
+#main-window {
+  background: yellow !important; /* #f2f4f5 */
+}
+
+#browser, window, #main-window, #toolbar-menubar,
+#TabsToolbar, #PersonalToolbar, #navigator-toolbox,#sidebar-box
+window, #nav-bar,
+.tab-background[selected="true"] {
+  background: transparent !important;
+  appearance: -moz-window-titlebar !important;
+  background-image: none !important;
+} 
+
+:root {
+  appearance: -moz-window-titlebar !important;
+}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+#sidebar-main {
+  margin-right: -10px;
+}
+
+#sidebar-main[sidebar-panel-open] {
+  margin-right: 0px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] .tab-content {
+  padding: 12px 10px !important;
+}
+
+.titlebar-spacer {
+  width: 8px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] tab {
+  margin-top: -12px !important;
+}
+
+#PlacesToolbarItems > .bookmark-item {
+  padding: 4px 6px !important;
+  margin: 6px 02px !important;
+}
+
+#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+  font-size: 1.1rem !important;
+}
+
+#urlbar {
+  padding: 0px 4px !important;
+  min-height: 34px !important;
+}
+
+#urlbar-container {
+  --urlbar-container-height: 38px !important;
+  margin-top: 2px;
+}
+
+#urlbar-background {
+  border-radius: 10px !important;
+}
+
+#identity-icon-box {
+  border-radius: 300px !important;
+  height: 26px !important;
+  margin-top: 2px !important;
+  margin-left: -1px !important;
+}
