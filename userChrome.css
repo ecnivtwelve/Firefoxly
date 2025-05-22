@@ -1,5 +1,5 @@
-#navigator-toolbox *, #browser * {
-  font-family: "Nebula Sans", sans-serif;
+#navigator-toolbox *, #browser *, popupset > *:not(menupopup) * {
+  font-family: "Nebula Sans", "Noto Sans", system-ui, sans-serif;
 }
 
 * {
@@ -56,9 +56,9 @@
   }
 }
 
-#tabbrowser-tabbox, #tabbrowser-tabbox * {
+#tabbrowser-tabbox {
   border-radius: 8px !important;
-  overflow: hidden
+  overflow: hidden !important;
 }
 
 #main-window {
@@ -69,9 +69,7 @@
 #TabsToolbar, #PersonalToolbar, #navigator-toolbox,#sidebar-box
 window, #nav-bar,
 .tab-background[selected="true"] {
-  background: transparent !important;
   appearance: -moz-window-titlebar !important;
-  background-image: none !important;
 } 
 
 :root {
@@ -102,12 +100,17 @@ window, #nav-bar,
   margin-top: -12px !important;
 }
 
-#PlacesToolbarItems > .bookmark-item {
-  padding: 4px 6px !important;
-  margin: 6px 02px !important;
+#PlacesToolbarItems {
+  margin-left: -2px !important;
 }
 
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+#PlacesToolbarItems > .bookmark-item {
+  padding: 5px 7px !important;
+  margin: 6px 2px !important;
+}
+
+.toolbarbutton-text
+{
   font-size: 1.1rem !important;
 }
 
@@ -125,9 +128,87 @@ window, #nav-bar,
   border-radius: 10px !important;
 }
 
+.chromeclass-toolbar-additional, #identity-icon-box {
+  background: none !important;
+}
+
+#urlbar-searchmode-switcher, #identity-icon-box {
+  border-radius: 0px !important;
+  border-right: 1px solid light-dark(#00000032, #FFFFFF22);
+  height: 22px !important;
+  margin-top: 4px !important;
+}
+
+#urlbar-searchmode-switcher {
+  margin-right: 10px !important;
+}
+
 #identity-icon-box {
-  border-radius: 300px !important;
-  height: 26px !important;
-  margin-top: 2px !important;
-  margin-left: -1px !important;
+  margin-right: 6px !important;
+  padding-right: 10px !important;
+}
+
+#urlbar-background {
+  background: light-dark(#00000011, #FFFFFF12) !important;
+  border: 0.5px solid light-dark(#0000003f, #FFFFFF42) !important;
+}
+
+#urlbar[breakout-extend="true"] #urlbar-background {
+  background: light-dark(#ffffff, #252525) !important;
+  border: 1px solid light-dark(#00000042, #FFFFFF42) !important;
+}
+
+#nav-bar {
+  margin-bottom: 7px !important;
+}
+
+#PersonalToolbar {
+  margin-top: -7px !important;
+  margin-bottom: 1px !important;
+}
+
+.subviewbutton label {
+  font-size: 1.2rem !important;
+}
+Â
+#sidebar-box {
+  margin-right: -10px !important;
+}
+
+#appMenu-multiView .panel-subview-body > toolbarbutton,
+#appMenu-multiView .panel-subview-body > toolbaritem {
+  padding: 8px 14px !important;
+  margin: 0px !important;
+  border-radius: 0px !important;
+}
+
+toolbarseparator {
+  border-top: none !important;
+  height: 1px !important;
+  border-radius: 0px !important;
+  margin: 6px 0 !important;
+  background: light-dark(#00000022, #FFFFFF42) !important;
+}
+
+#appMenu-multiView .toolbarbutton-text {
+  font-weight: 500 !important;
+}
+
+panel:where([type="arrow"]) {
+   background: transparent !important;
+}
+
+#appMenu-multiView {
+  background: #00000000;
+  /* appearance: -moz-window-titlebar !important; */
+}
+
+#appMenu-fxa-status2 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#appMenu-fxa-status2 toolbarbutton {
+  margin: 0 !important;
+  padding: 0 !important;
 }
