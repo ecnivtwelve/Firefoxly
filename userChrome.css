@@ -61,6 +61,12 @@
   overflow: hidden !important;
 }
 
+html[inFullscreen="true"] #tabbrowser-tabbox {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 #main-window {
   background: yellow !important; /* #f2f4f5 */
 }
@@ -75,6 +81,12 @@ window, #nav-bar,
 :root {
   appearance: -moz-window-titlebar !important;
 }
+
+html[inFullscreen="true"] #navigator-toolbox,
+html[inFullscreen="true"] #browser {
+  appearance: none !important;
+  background: light-dark(#FFF, #111) !important;;
+} 
 
 #navigator-toolbox {
   border: none !important;
